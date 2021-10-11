@@ -1,0 +1,44 @@
+{{define "order"}}
+
+<!doctype html>
+<html lang="ru" class="h-100">
+<head>
+        <meta charset='utf-8'>
+        <title>Данные о заказе</title>
+        <!-- Ссылка на CSS стили и иконку сайта -->
+        <link rel='stylesheet' href='/static/css/main.css'>
+        <link rel='shortcut icon' href='/static/img/folder.ico' type='image/x-icon'>
+        <!-- Подключаем новый шрифт для сайта от Google Fonts -->
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700'>
+</head>
+<body>
+    <header>
+        <h1><a href='/'>Данные о заказе № {{.OrderUID}}</a></h1>
+    </header>
+    <nav>
+        <a href='/'>Вернуться на главную страницу</a>
+    </nav>
+    <main>
+    <table class="table">
+        <th>Номер заказа</th>
+        <th>Продавец</th>
+        <th>Итоговая цена</th>
+        <th>Номер Клиента</th>
+        <th>Track-номер</th>
+        <th>Служба доставки</th>
+        
+        <tr>
+            <td>{{.OrderUID}}</td>
+            <td>{{.Entry}}</td>
+            <td>{{.TotalPrice}}</td>
+            <td>{{.CustomerID}}</td>
+            <td>{{.TrackNumber}}</td>
+            <td>{{.DeliveryService}}</td>
+        </tr>
+    
+    </table>
+</main>
+</body>
+</html>
+
+{{end}}

@@ -1,0 +1,10 @@
+{{template "base" .}}
+
+{{define "title"}}Главная страница{{end}}
+
+{{define "main"}}
+<form method="get" action="order?id=">
+    <input type="text" name="id" placeholder="Введите номер (ID) заказа в это поле"/>
+    <input type="submit" value="Получить данные о заказе">
+</form>
+{{end}}

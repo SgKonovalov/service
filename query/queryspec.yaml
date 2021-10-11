@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: query
+  labels:
+    env : prod
+    app : service
+    tier : backend
+    owner: sgKonovalov
+spec:
+  containers:
+    - name: query
+      image: sgkonovalov/query:latest
